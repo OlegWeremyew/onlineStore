@@ -86,5 +86,5 @@ module.exports = {
   Brand,
   Rating,
   TypeBrand,
-  DeviceInfo
+  DeviceInfo,
 }
