@@ -1,5 +1,5 @@
-const Router = require('express')
-const router = new Router()
+import {Router} from 'express'
+const router = Router()
 const BrandController = require('../controllers/brandController')
 
 router.get('/', BrandController.getAll)

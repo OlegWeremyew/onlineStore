@@ -1,5 +1,5 @@
-const Router = require('express')
-const router = new Router()
+import {Router} from 'express'
+const router = Router()
 const DeviceController = require('../controllers/deviceController')
 
 router.get('/', DeviceController.getAll)

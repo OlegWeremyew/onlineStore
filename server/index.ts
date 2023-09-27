@@ -1,22 +1,22 @@
-const express = require('express')
-require('dotenv').config()
+import express, {Express} from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config()
+const models = require('./models/models')
 const sequelize = require('./db')
-const cors = require('cors')
 
-const router = require('./routes/index')
+const router = require('./routes/index.ts')
 const errorHandler = require('./middleware/ErrorHandlingMidleware')
 
 const PORT = process.env.PORT || 5000
-const models = require('./models/models')
-const app = express()
+const app: Express = express()
 
 app.use(cors())
-//@ts-ignore
 app.use(express.json())
 //@ts-ignore
 app.use('/api', router)
 app.get('/', (req, res) => {
-  res.send('test')
+  res.send('test1')
 })
 
 //errors handler
