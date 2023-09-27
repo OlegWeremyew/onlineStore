@@ -11,8 +11,13 @@ const models = require('./models/models')
 const app = express()
 
 app.use(cors())
+//@ts-ignore
 app.use(express.json())
+//@ts-ignore
 app.use('/api', router)
+app.get('/', (req, res) => {
+  res.send('test')
+})
 
 //errors handler
 app.use(errorHandler)
@@ -21,7 +26,7 @@ const start = async () => {
   try {
     await sequelize.authenticate() //bd connecting
     await sequelize.sync() // bd check data
-    app.listen(PORT, () => console.log(`server started on port ${PORT}`))
+    app.listen(PORT, () => console.log(`server started on  http://localhost:${PORT}`))
   } catch (e) {
     console.log(e.message)
   }

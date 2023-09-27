@@ -1,8 +1,9 @@
 const Router = require('express')
 const router = new Router()
+const DeviceController = require('../controllers/deviceController')
 
-router.post('/', )
-router.get('/', )
-router.get('/:id', )
+router.get('/', DeviceController.getAll)
+router.get('/:id', DeviceController.getOne)
+router.post('/', DeviceController.create)
 
 module.exports = router
