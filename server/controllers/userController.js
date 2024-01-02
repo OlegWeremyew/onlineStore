@@ -11,9 +11,11 @@ class UserController {
     res.json(id)
   }
 
-  async registration(req, res) {}
+  async registration(req, res) {
+  }
 
-  async login(req, res) {}
+  async login(req, res) {
+  }
 
 }
 

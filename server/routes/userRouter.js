@@ -1,5 +1,5 @@
-import {Router} from 'express'
-const router = Router()
+const Router =  require('express');
+const router =  new Router()
 const UserController = require('../controllers/userController')
 
 router.get('/auth', UserController.check)
